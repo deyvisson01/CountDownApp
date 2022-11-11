@@ -1,5 +1,12 @@
+import React from 'react'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { selectAuthState } from '../../store/authSlice';
+
+
 function Home() {
-  return <h1>Hello World Homesss</h1>;
+   const authState = useSelector(selectAuthState)
+  return <h1>{authState}</h1>;
 }
 
 export default Home;
