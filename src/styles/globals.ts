@@ -14,9 +14,53 @@ export default createGlobalStyle`
   }
 
   :root {
+    /* Size */
+    --size-8: 8px;
+    --size-16: 16px;
+    --size-24: 24px;
+    --size-32: 32px;
+    --size-40: 40px;
+    --size-48: 48px;
+    --size-56: 56px;
+    --size-64: 64px;
+    --size-72: 72px;
+    --size-80: 80px;
+    --size-88: 88px;
+    --size-96: 96px;
+    --size-104: 104px;
+    --size-112: 112px;
+
+    /* Border radius */
+    --border-radius-none: 0;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 24px;
+    --border-radius-pill: 500px;
+    --border-radius-circular: 50%;
+
+    /* Box shadow */
+    --box-shadow-level-1: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --box-shadow-level-2: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --box-shadow-level-3: 0 16px 32px rgba(0, 0, 0, 0.3);
+    --box-shadow-level-4: 0 16px 48px rgba(0, 0, 0, 0.4);
+
+    /* Font weight */
+    --font-weight-thin: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+     /* Blue */
+    --color-blue-dark: #0016e2;
+    --color-blue-base: #5262ff;
+    --color-blue-light: #adb5ff;
+
     --white: #FFF;
     --yellow: #e5bf00;
 
+    --background-green-primary: #03dd8a;
     --background-white: #fff;
     --background-button: #03dd8a;
     --background-button-danger: #ee5d6d;

@@ -36,15 +36,14 @@ export const TitleInput = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  height: 36px;
+  height: var(--size-48);
   display: flex;
   align-items: center;
   padding: 0 10px;
 
-  background: #3d4151;
-  border: 1px solid transparent;
+  border: 2px solid var(--color-blue-light);
   border-radius: 6px;
-  color: #fff;
+  color: var(--color-blue-light);
   & + div {
     margin-top: 8px;
   }
@@ -65,14 +64,14 @@ export const Content = styled.div`
 
     border: 0;
     outline: none;
-    color: #fff;
+    color: var(--color-blue-base);
 
     &::placeholder {
-      color: #6f7693;
+      color: var(--color-blue-light);
     }
 
     &:read-only {
-      color: #6f7693;
+      color: var(--color-blue-light);
     }
   }
 `
