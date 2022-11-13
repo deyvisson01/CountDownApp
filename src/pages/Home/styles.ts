@@ -36,3 +36,25 @@ export const Title = styled.h1`
   font-size: var(--size-40);
   color: var(--color-blue-base);
 `
+
+export const TitleModal = styled.h2`
+  width: 100%;
+  text-align: center;
+  font-size: var(--size-24);
+  color: var(--white);
+  margin: 20px 0;
+
+  span{
+    font-size: var(--size-24);
+    color: var(--text-danger);
+  }
+`
+
+export const ContainerButton = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+`

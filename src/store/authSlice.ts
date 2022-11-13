@@ -7,6 +7,7 @@ var data = dayjs()
 
 // Type for our state
 export interface Event {
+  id: number
   title: string,
   date: string,
   description: string
@@ -21,16 +22,19 @@ const initialState: AuthState = {
   authState: 'TESTE HOMESSSSS',
   Events: [
     {
+      id: 1,
       title: 'Teste',
       date: '2022-11-15T13:39:11-03:00',
       description: 'Teste descrição'
     },
     {
+      id: 2,
       title: 'Teste2',
       date: '2022-11-17T13:39:11-03:00',
       description: 'Teste descrição2'
     },
     {
+      id: 3,
       title: 'Teste3',
       date: '2022-11-19T13:39:11-03:00',
       description: 'Teste descrição3'

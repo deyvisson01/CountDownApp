@@ -24,3 +24,7 @@ export function calcFutureDate(count: number): string {
 
   return dayjs(newDate).format('DD/MM/YYYY')
 }
+
+export function getRamdomValue(): number {
+  return Math.random() * 10
+}

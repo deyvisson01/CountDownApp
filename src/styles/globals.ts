@@ -57,6 +57,8 @@ export default createGlobalStyle`
     --color-blue-base: #5262ff;
     --color-blue-light: #adb5ff;
 
+    --color-orange-base: #d7ac07;
+
      /* Background gradient */
     --gradient-blue-base: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 
