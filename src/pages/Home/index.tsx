@@ -3,12 +3,14 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../components/Button';
 import Header from '../../components/Header';
-import { selectAuthState } from '../../store/authSlice';
+import { selectAuthState, selectEvents } from '../../store/authSlice';
 import { Container, Content } from './styles';
 
 
 function Home() {
    const authState = useSelector(selectAuthState)
+  const events = useSelector(selectEvents)
+  console.log(events)
   return (
     <>
       <Container>

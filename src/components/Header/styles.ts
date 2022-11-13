@@ -16,11 +16,11 @@ export const Container = styled.header`
   left: 0;
 
   padding: 0 20px;
-  background-color: var(--background-secundary-lg);
+  background: var(--gradient-blue-base);
 
   h2 {
-    font-size: 1.8rem;
-    font-weight: 900;
+    font-size: var(--size-24);
+    font-weight: var(--font-weight-extra-bold);
     font-stretch: normal;
     font-style: normal;
     line-height: normal;

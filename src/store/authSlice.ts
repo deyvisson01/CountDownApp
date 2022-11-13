@@ -1,14 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from './store'
 
+const data = new Date();
+
 // Type for our state
 export interface AuthState {
-  authState: string
+  authState: string,
+  Events: [{
+    titulo: string,
+    data: Date,
+    descricao: string
+  }]
 }
 
 // Initial state
 const initialState: AuthState = {
-  authState: 'TESTE HOMESSSSS'
+  authState: 'TESTE HOMESSSSS',
+  Events: [
+    {
+      titulo: 'Teste',
+      data: data,
+      descricao: 'Teste descrição'
+    }
+  ]
 }
 
 // Actual Slice
@@ -20,13 +34,15 @@ export const authSlice = createSlice({
     setAuthState(state, action) {
       state.authState = action.payload
     },
+    setEvents(state, action) {
+      state.Events = action.payload
+    },
   }
 })
 
-export const {
-  setAuthState
-} = authSlice.actions
+export const { setAuthState, setEvents } = authSlice.actions
 
 export const selectAuthState = (state: RootState) => state.auth.authState
+export const selectEvents = (state: RootState) => state.auth.Events
 
 export default authSlice.reducer
