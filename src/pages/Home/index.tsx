@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import Button from '../../components/Button';
 import Header from '../../components/Header';
 import Modal from '../../components/Modal';
-import { selectEvents } from '../../store/authSlice';
+import { selectEvents, setEvents } from '../../store/authSlice';
 import Item from './Item';
 import { Container, ContainerButton, Content, ListEvents, Title, TitleModal } from './styles';
 
 
 function Home() {
 
+  const dispatch = useDispatch()
   const events = useSelector(selectEvents)
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [idEvent, setIdEvent] = useState(0)
@@ -20,6 +21,12 @@ function Home() {
     setShowDeleteModal(true)
     setIdEvent(event.id)
     setTitleEvent(event.title)
+  }
+
+  const removeEvent = () => {
+    var newEvents = events.filter(event => event.id !== idEvent)
+    dispatch(setEvents(newEvents))
+    setShowDeleteModal(false)
   }
 
   //console.log(events)
@@ -61,7 +68,7 @@ function Home() {
               disabled={false}
               type="danger"
               loading={false}
-              onClick={() => setShowDeleteModal(false)}
+              onClick={() => removeEvent()}
             />
 
             </ContainerButton>

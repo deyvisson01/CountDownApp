@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Container, Content, Description, DisplayDate, Title } from './styles';
+import { Container, Content, DisplayDate, Title } from './styles';
 import * as dayjs from 'dayjs'
 import { getDays } from '../../../utils/helpers';
 
@@ -20,7 +20,7 @@ const Item = (props: Props) => {
       <Container>
         <Content>
           <Title>{props.title}</Title>
-          <Description>{props.description}</Description>
+          <textarea disabled={true} value={props.description} />
           <DisplayDate>{dayjs(props.date).format('DD/MM/YYYY')} - {getDays(props.date)} dias restantes</DisplayDate>
         </Content>
         <img src={Trash} alt="Deletar evento" onClick={props.onDelete}/>
