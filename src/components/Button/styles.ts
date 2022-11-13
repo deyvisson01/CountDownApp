@@ -38,9 +38,9 @@ export const Container = styled.div<Props>`
     }
 
     &.primary {
-      background-color: #03dd8a;
-      color: #fff;
-      border: 1px solid #03dd8a;
+      background-color: var(--background-button);
+      color: var(--white);
+      border: 1px solid var(--background-button);
 
       img {
         margin-left: 0;
@@ -53,9 +53,9 @@ export const Container = styled.div<Props>`
     }
 
     &.outlined {
-      background-color: #FFF;
-      color: #03dd8a;
-      border: 1px solid #03dd8a;
+      background-color: var(--background-white);
+      color: var(--background-button);
+      border: 1px solid var(--background-button);
 
       img {
         margin-left: 0;
@@ -63,20 +63,20 @@ export const Container = styled.div<Props>`
       }
 
       :not(:disabled):hover {
-        background-color: #03dd8a;
+        background-color: var(--background-button);
         color: var(--white);
       }
     }
 
     &.danger {
-      background-color: #FFF;
-      color: #ee5d6d;
-      border: 1px solid #ee5d6d;
+      background-color: var(--background-white);
+      color: var(--background-button-danger);
+      border: 1px solid var(--background-button-danger);
 
       :not(:disabled):hover {
-        background-color: #ee5d6d;
-        color: #FFF;
-        border: 1px solid #ee5d6d;
+        background-color: var(--background-button-danger);
+        color: var(--background-white);
+        border: 1px solid var(--background-button-danger);
       }
     }
   }
