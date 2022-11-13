@@ -9,22 +9,13 @@ export function getDays(date1: string): string {
   return diffDays.toFixed(0)
 }
 
-export function calcDays(count: number): string {
-  var date = new Date();
-  var outraData = new Date();
-  outraData.setDate(date.getDate() + count);
-
-  return outraData.toString()
-}
-
 export function calcFutureDate(count: number): string {
   var date = new Date();
   var newDate = new Date();
   newDate.setDate(date.getDate() + count);
-
-  return dayjs(newDate).format('DD/MM/YYYY')
+  return dayjs(newDate).format('YYYY-MM-DDTHH:mm:ss')
 }
 
 export function getRamdomValue(): number {
-  return Math.random() * 10
+  return Math.floor(Math.random() * 999)
 }
